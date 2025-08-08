@@ -3,7 +3,7 @@ import { SiX, SiGithub, SiZenn } from "react-icons/si";
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col items-center bg-gray-900 min-h-screen text-white">
       <div>
         <Image
           src="/profile/profile-2.jpg"
@@ -14,15 +14,21 @@ export default function Home() {
         />
       </div>
       <div>
-        OCA大阪デザイン&テクノロジー専門学校
+        <p className="text-2xl font-light tracking-wider leading-relaxed font-sans">
+          OCA大阪デザイン&テクノロジー専門学校
+        </p>
       </div>
       <div>
-        前田剛志
+        <p className="text-4xl font-light leading-snug font-sans">
+          前田 剛志
+        </p>
       </div>
       <div>
         <SiX />
+        <SiZenn
+          color="#00bfff"
+        />
         <SiGithub />
-        <SiZenn />
       </div>
     </div>
   );
