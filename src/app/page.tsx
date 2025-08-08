@@ -23,12 +23,31 @@ export default function Home() {
           前田 剛志
         </p>
       </div>
-      <div>
-        <SiX />
-        <SiZenn
-          color="#00bfff"
-        />
-        <SiGithub />
+      <div className="flex space-x-4">
+        <a
+          href="https://x.com/maetsuyo"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="X"
+        >
+          <SiX />
+        </a>
+        <a
+          href="https://zenn.dev/maetsuyo"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Zenn"
+        >
+          <SiZenn color="#00bfff"/>
+        </a>
+        <a
+          href="https://github.com/maetsuyo"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <SiGithub />
+        </a>
       </div>
     </div>
   );
