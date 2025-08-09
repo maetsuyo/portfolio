@@ -23,12 +23,13 @@ export default function Home() {
           前田 剛志
         </p>
       </div>
-      <div className="flex space-x-4">
+      <div className="flex space-x-5 text-2xl">
         <a
           href="https://x.com/maetsuyo"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="X"
+          className="hover:scale-125 transition-transform duration-200"
         >
           <SiX />
         </a>
@@ -37,6 +38,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Zenn"
+          className="hover:scale-125 transition-transform duration-200"
         >
           <SiZenn color="#00bfff"/>
         </a>
@@ -45,6 +47,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
+          className="hover:scale-125 transition-transform duration-200"
         >
           <SiGithub />
         </a>
