@@ -3,8 +3,8 @@ import { SiX, SiGithub, SiZenn } from "react-icons/si";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center bg-gray-900 min-h-screen text-white">
-      <div>
+    <div className="flex flex-col justify-center items-center bg-gray-900 h-full text-white">
+      <div className="-mt-16">
         <Image
           src="/profile/profile-2.jpg"
           alt="profile"
@@ -14,12 +14,12 @@ export default function Home() {
         />
       </div>
       <div>
-        <p className="text-2xl font-light tracking-wider leading-relaxed font-sans">
+        <p className="text-2xl font-light tracking-wider leading-relaxed font-sans mt-5">
           OCA大阪デザイン&テクノロジー専門学校
         </p>
       </div>
       <div>
-        <p className="text-4xl font-light leading-snug font-sans">
+        <p className="text-4xl font-light leading-snug font-sans mb-3">
           前田 剛志
         </p>
       </div>
