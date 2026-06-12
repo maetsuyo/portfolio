@@ -27,14 +27,14 @@ export default function ProfilePageComponent() {
 
       <section className="mb-6">
         <h3 className="text-2xl font-semibold mb-2">サマーインターンシップ参加実績</h3>
-        <p className="text-lg leading-relaxed">
+        <div className="text-lg leading-relaxed">
           <ul>
             <li>三井物産セキュアディレクション株式会社 診断エンジニアコース（4日間）</li>
             <li>ストーンビートセキュリティ株式会社（3日間）</li>
             <li>エムオーテックス株式会社 開発コース（2日間）</li>
             <li>GMOサイバーセキュリティ byイエラエ株式会社 Web診断部門コース（5日間）</li>
           </ul>
-        </p>
+        </div>
       </section>
     </div>
   );
