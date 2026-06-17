@@ -121,8 +121,8 @@ export default function ProfilePageComponent() {
             <div key={i} className="flex items-start gap-4 bg-white/5 rounded-xl p-4">
               <div className="mt-2 w-2 h-2 rounded-full bg-cyan-400 shrink-0" />
               <div>
-                <p className="text-lg font-medium">{item.company}</p>
-                <p className="text-lg text-gray-400">
+                <p className="text-xl font-medium">{item.company}</p>
+                <p className="text-xl text-gray-400">
                   {item.course
                     ? `${item.course}（${item.days}日間）`
                     : `（${item.days}日間）`}
