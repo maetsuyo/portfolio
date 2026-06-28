@@ -11,6 +11,7 @@ export default function HomePageComponent() {
           width={300}
           height={300}
           className="rounded-full"
+          priority
         />
       </div>
       <div>

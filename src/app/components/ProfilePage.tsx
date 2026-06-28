@@ -5,13 +5,13 @@
 ];
 
 const tools = [
-  { name: "Burp Suite", icon: null },
+  { name: "Burp Suite", icon: "https://cdn.simpleicons.org/burpsuite/ffffff" },
   { name: "Kali Linux", icon: "https://cdn.simpleicons.org/kalilinux/ffffff" },
   { name: "OWASP ZAP", icon: "https://cdn.simpleicons.org/owasp/ffffff" },
   { name: "Wireshark", icon: "https://cdn.simpleicons.org/wireshark/ffffff" },
-  { name: "Nikto", icon: null },
-  { name: "Nessus", icon: null },
-  { name: "Process Monitor", icon: null },
+  { name: "Nikto", icon: "https://api.iconify.design/mdi/radar.svg?color=%23ffffff" },
+  { name: "Nessus", icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/tenable.svg", invert: true },
+  { name: "Process Monitor", icon: "https://api.iconify.design/material-symbols/troubleshoot.svg?color=%23ffffff" },
 ];
 
 const certifications = [
@@ -81,14 +81,13 @@ export default function ProfilePageComponent() {
                 key={tool.name}
                 className="flex items-center gap-2 bg-white/5 hover:bg-white/10 transition-colors rounded-lg px-4 py-2"
               >
-                {tool.icon ? (
-                  /* eslint-disable-next-line @next/next/no-img-element */
-                  <img src={tool.icon} alt={tool.name} className="w-5 h-5" />
-                ) : (
-                  <div className="w-5 h-5 rounded bg-gray-700 flex items-center justify-center text-[10px] text-gray-400 font-bold">
-                    {tool.name[0]}
-                  </div>
-                )}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={tool.icon}
+                  alt={tool.name}
+                  className="w-5 h-5"
+                  style={tool.invert ? { filter: "brightness(0) invert(1)" } : undefined}
+                />
                 <span className="text-base">{tool.name}</span>
               </div>
             ))}
