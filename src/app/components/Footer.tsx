@@ -4,23 +4,24 @@ import { PageState } from "../types/page";
 
 export default function Footer({ currentPage, setPage }: PageState) {
   return (
-    <footer className="bg-gray-800 text-white p-4 text-3xl flex justify-center space-x-10">
-      <button
-        onClick={() => setPage("home")}
-        className={`px-6 py-2 rounded transition-colors duration-200 ${
-          currentPage === "home" ? "bg-gray-700" : "hover:bg-gray-700"
-        }`}
-      >
-        Home
-      </button>
-      <button
-        onClick={() => setPage("profile")}
-        className={`px-6 py-2 rounded transition-colors duration-200 ${
-          currentPage === "profile" ? "bg-gray-700" : "hover:bg-gray-700"
-        }`}
-      >
-        Profile
-      </button>
+    <footer className="relative bg-[#02020f]/90 backdrop-blur-md p-5 flex justify-center gap-6">
+      <div className="nebula-border-top" />
+      {(["home", "profile"] as const).map((page) => (
+        <button
+          key={page}
+          onClick={() => setPage(page)}
+          className={`
+            px-10 py-3 text-sm font-medium tracking-[0.35em] uppercase font-mono
+            rounded-sm transition-all duration-300 border
+            ${currentPage === page
+              ? "text-purple-200 border-purple-500/50 bg-purple-600/10 shadow-[0_0_24px_rgba(147,51,234,0.25),inset_0_0_12px_rgba(147,51,234,0.08)]"
+              : "text-slate-500 border-white/[0.08] hover:text-purple-300 hover:border-purple-500/35 hover:bg-purple-600/5 hover:shadow-[0_0_14px_rgba(147,51,234,0.18)]"
+            }
+          `}
+        >
+          {page === "home" ? "Home" : "Profile"}
+        </button>
+      ))}
     </footer>
   );
 }

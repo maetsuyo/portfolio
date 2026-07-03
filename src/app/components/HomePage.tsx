@@ -3,55 +3,51 @@ import { SiX, SiGithub, SiZenn } from "react-icons/si";
 
 export default function HomePageComponent() {
   return (
-    <div className="flex flex-col justify-center items-center h-full text-white">
-      <div className="-mt-16">
+    <div className="flex flex-col justify-center items-center h-full select-none">
+      <div className="-mt-10 float-cosmic">
         <Image
-          src="/profile/profile-2.jpg"
+          src="/profile/profile_OCA.jpg"
           alt="profile"
-          width={300}
-          height={300}
-          className="rounded-full"
+          width={320}
+          height={320}
+          className="rounded-full border border-white/10"
           priority
         />
       </div>
-      <div>
-        <p className="text-2xl font-light tracking-wider leading-relaxed font-sans mt-5">
+
+      <div className="mt-12 text-center fade-in-up" style={{ animationDelay: "0.15s" }}>
+        <p className="text-lg font-light tracking-[0.28em] text-slate-200 font-mono">
           OCA大阪デザイン&テクノロジー専門学校
         </p>
       </div>
-      <div>
-        <p className="text-4xl font-light leading-snug font-sans mb-3">
-          前田 剛志
+
+      <div className="mt-4 fade-in-up" style={{ animationDelay: "0.3s" }}>
+        <p className="text-5xl font-light tracking-[0.35em] stellar-text mb-8">
+          佐々木 湧生
         </p>
       </div>
-      <div className="flex space-x-5 text-2xl">
-        <a
-          href="https://x.com/maetsuyo"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="X"
-          className="hover:scale-125 transition-transform duration-200"
-        >
-          <SiX />
-        </a>
-        <a
-          href="https://zenn.dev/maetsuyo"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Zenn"
-          className="hover:scale-125 transition-transform duration-200"
-        >
-          <SiZenn color="#00bfff"/>
-        </a>
-        <a
-          href="https://github.com/maetsuyo"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-          className="hover:scale-125 transition-transform duration-200"
-        >
-          <SiGithub />
-        </a>
+
+      <div className="flex items-center gap-6 fade-in-up" style={{ animationDelay: "0.45s" }}>
+        <div className="h-px w-14 bg-gradient-to-r from-transparent to-purple-500/50" />
+        <div className="flex space-x-8 text-2xl">
+          {[
+            { href: "https://x.com/maetsuyo",      label: "X",      Icon: SiX      },
+            { href: "https://zenn.dev/maetsuyo",    label: "Zenn",   Icon: SiZenn   },
+            { href: "https://github.com/maetsuyo", label: "GitHub", Icon: SiGithub },
+          ].map(({ href, label, Icon }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="text-slate-300 hover:text-purple-300 hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(168,85,247,0.9)]"
+            >
+              <Icon />
+            </a>
+          ))}
+        </div>
+        <div className="h-px w-14 bg-gradient-to-l from-transparent to-pink-500/50" />
       </div>
     </div>
   );

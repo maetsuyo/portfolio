@@ -1,26 +1,160 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-deep: #02020f;
+  --accent-purple: #9333ea;
+  --accent-pink: #ec4899;
+  --accent-blue: #60a5fa;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--bg-deep);
+  --color-foreground: var(--text-primary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes nebulaPulse {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 0.85; }
+}
+
+@keyframes ringRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes ringRotateReverse {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+@keyframes stellarGlow {
+  0%, 100% {
+    text-shadow:
+      0 0 10px rgba(255, 255, 255, 0.7),
+      0 0 25px rgba(168, 85, 247, 0.4),
+      0 0 50px rgba(96, 165, 250, 0.2);
+  }
+  50% {
+    text-shadow:
+      0 0 15px rgba(255, 255, 255, 1),
+      0 0 35px rgba(236, 72, 153, 0.5),
+      0 0 70px rgba(168, 85, 247, 0.35);
   }
 }
 
+@keyframes floatCosmic {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(18px); }
+  to { transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { transform: translateY(-12px); }
+  to { transform: translateY(0); }
+}
+
+@keyframes borderNebula {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 0.85; }
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+}
+
+.cosmic-bg {
+  position: relative;
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(147, 51, 234, 0.13) 0%, transparent 45%),
+    radial-gradient(ellipse at 80% 15%, rgba(96, 165, 250, 0.10) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 92%, rgba(236, 72, 153, 0.09) 0%, transparent 45%),
+    radial-gradient(ellipse at 8% 75%, rgba(147, 51, 234, 0.07) 0%, transparent 40%),
+    radial-gradient(ellipse at 92% 70%, rgba(59, 130, 246, 0.06) 0%, transparent 40%),
+    #02020f;
+}
+
+.stellar-text {
+  color: #f8fafc;
+  animation: stellarGlow 4s ease-in-out infinite;
+}
+
+.nebula-ring-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.nebula-ring-outer {
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  background: conic-gradient(from 0deg, #9333ea, #ec4899, #60a5fa, #a855f7, #9333ea);
+  animation: ringRotate 7s linear infinite;
+  opacity: 0.35;
+  filter: blur(6px);
+  z-index: 0;
+}
+
+.nebula-ring-inner {
+  position: absolute;
+  inset: -2px;
+  border-radius: 9999px;
+  background: conic-gradient(from 180deg, #9333ea, #60a5fa, #ec4899, #9333ea);
+  animation: ringRotateReverse 5s linear infinite;
+  z-index: 0;
+}
+
+.float-cosmic {
+  animation: floatCosmic 5s ease-in-out infinite;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.9s ease-out;
+}
+
+.fade-in-down {
+  animation: fadeInDown 0.6s ease-out;
+}
+
+.nebula-border-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(147, 51, 234, 0.7),
+    rgba(236, 72, 153, 0.6),
+    rgba(96, 165, 250, 0.7),
+    transparent
+  );
+  animation: borderNebula 3.5s ease-in-out infinite;
+}
+
+.nebula-border-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(96, 165, 250, 0.7),
+    rgba(147, 51, 234, 0.6),
+    rgba(236, 72, 153, 0.7),
+    transparent
+  );
+  animation: borderNebula 3.5s ease-in-out infinite;
 }

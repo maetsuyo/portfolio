@@ -38,33 +38,33 @@ const internships = [
 export default function ProfilePageComponent() {
   return (
     <div className="p-8 max-w-4xl mx-auto text-white">
-      <h2 className="text-3xl font-bold mb-8">プロフィール</h2>
+      <h2 className="text-3xl font-bold mb-8 stellar-text">プロフィール</h2>
 
-      <section className="mb-10 bg-white/5 rounded-2xl p-6">
-        <h3 className="text-2xl font-semibold mb-3 text-cyan-400">自己紹介</h3>
-        <p className="leading-relaxed text-gray-200 text-xl">
+      <section className="mb-10 bg-white/[0.04] border border-white/[0.08] rounded-2xl p-6">
+        <h3 className="text-2xl font-semibold mb-3 text-cyan-400 drop-shadow-[0_0_8px_rgba(0,212,255,0.45)]">自己紹介</h3>
+        <p className="leading-relaxed text-slate-200 text-xl">
           現在はWebアプリケーションの脆弱性診断のアルバイトをしています。この時点まで戻す予定
         </p>
       </section>
 
       <section className="mb-10">
-        <h3 className="text-2xl font-semibold mb-6 text-cyan-400">スキル</h3>
+        <h3 className="text-2xl font-semibold mb-6 text-cyan-400 drop-shadow-[0_0_8px_rgba(0,212,255,0.45)]">スキル</h3>
 
         <div className="mb-8">
-          <p className="text-lg font-medium text-gray-500 uppercase tracking-widest mb-4">
+          <p className="text-lg font-medium text-slate-500 uppercase tracking-widest mb-4">
             プログラミング言語
           </p>
           <div className="flex flex-wrap gap-4">
             {languages.map((lang) => (
               <div
                 key={lang.name}
-                className="flex flex-col items-center gap-2 bg-white/5 hover:bg-white/10 transition-colors rounded-xl p-5 w-28"
+                className="flex flex-col items-center gap-2 bg-white/[0.04] border border-white/[0.07] hover:bg-white/[0.08] hover:border-purple-500/30 transition-all duration-200 rounded-xl p-5 w-28"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={lang.icon} alt={lang.name} className="w-10 h-10" />
                 <div className="text-center">
                   <p className="text-base font-medium">{lang.name}</p>
-                  <p className="text-base text-gray-400">{lang.sub}</p>
+                  <p className="text-base text-slate-400">{lang.sub}</p>
                 </div>
               </div>
             ))}
@@ -72,14 +72,14 @@ export default function ProfilePageComponent() {
         </div>
 
         <div className="mb-8">
-          <p className="text-lg font-medium text-gray-500 uppercase tracking-widest mb-4">
+          <p className="text-lg font-medium text-slate-500 uppercase tracking-widest mb-4">
             ツール
           </p>
           <div className="flex flex-wrap gap-3">
             {tools.map((tool) => (
               <div
                 key={tool.name}
-                className="flex items-center gap-2 bg-white/5 hover:bg-white/10 transition-colors rounded-lg px-4 py-2"
+                className="flex items-center gap-2 bg-white/[0.04] border border-white/[0.07] hover:bg-white/[0.08] hover:border-purple-500/30 transition-all duration-200 rounded-lg px-4 py-2"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -95,14 +95,14 @@ export default function ProfilePageComponent() {
         </div>
 
         <div>
-          <p className="text-lg font-medium text-gray-500 uppercase tracking-widest mb-4">
+          <p className="text-lg font-medium text-slate-500 uppercase tracking-widest mb-4">
             資格
           </p>
           <div className="flex flex-wrap gap-2">
             {certifications.map((cert) => (
               <span
                 key={cert}
-                className="bg-cyan-950/60 border border-cyan-700/40 text-cyan-300 text-base rounded-full px-3 py-1"
+                className="bg-purple-950/40 border border-purple-700/30 text-purple-200 text-base rounded-full px-3 py-1"
               >
                 {cert}
               </span>
@@ -112,16 +112,16 @@ export default function ProfilePageComponent() {
       </section>
 
       <section className="mb-10">
-        <h3 className="text-2xl font-semibold mb-6 text-cyan-400">
+        <h3 className="text-2xl font-semibold mb-6 text-cyan-400 drop-shadow-[0_0_8px_rgba(0,212,255,0.45)]">
           サマーインターンシップ参加実績
         </h3>
         <div className="space-y-3">
           {internships.map((item, i) => (
-            <div key={i} className="flex items-start gap-4 bg-white/5 rounded-xl p-4">
-              <div className="mt-2 w-2 h-2 rounded-full bg-cyan-400 shrink-0" />
+            <div key={i} className="flex items-start gap-4 bg-white/[0.04] border border-white/[0.07] rounded-xl p-4">
+              <div className="mt-2 w-2 h-2 rounded-full bg-purple-400 shrink-0 shadow-[0_0_6px_rgba(168,85,247,0.8)]" />
               <div>
                 <p className="text-xl font-medium">{item.company}</p>
-                <p className="text-xl text-gray-400">
+                <p className="text-xl text-slate-400">
                   {item.course
                     ? `${item.course}（${item.days}日間）`
                     : `（${item.days}日間）`}
@@ -132,9 +132,9 @@ export default function ProfilePageComponent() {
         </div>
       </section>
 
-      <section className="bg-white/5 rounded-2xl p-6">
-        <h3 className="text-2xl font-semibold mb-3 text-cyan-400">その他</h3>
-        <p className="text-base text-gray-400">
+      <section className="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-6">
+        <h3 className="text-2xl font-semibold mb-3 text-cyan-400 drop-shadow-[0_0_8px_rgba(0,212,255,0.45)]">その他</h3>
+        <p className="text-base text-slate-400">
           サイバーセキュリティを学ぶうえで大切にしていること — 記載予定
         </p>
       </section>
