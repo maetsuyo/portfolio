@@ -43,7 +43,7 @@ export default function ProfilePageComponent() {
       <section className="mb-10 bg-white/5 rounded-2xl p-6">
         <h3 className="text-2xl font-semibold mb-3 text-cyan-400">自己紹介</h3>
         <p className="leading-relaxed text-gray-200 text-xl">
-          現在はWebアプリケーションの脆弱性診断のアルバイトをしています。
+          現在はWebアプリケーションの脆弱性診断のアルバイトをしています。この時点まで戻す予定
         </p>
       </section>
 
