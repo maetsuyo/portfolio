@@ -28,7 +28,7 @@ export default function HomePageComponent() {
       </div>
 
       <div className="flex items-center gap-6 fade-in-up" style={{ animationDelay: "0.45s" }}>
-        <div className="h-px w-14 bg-gradient-to-r from-transparent to-purple-500/50" />
+        <div className="h-px w-14 bg-linear-to-r from-transparent to-purple-500/50" />
         <div className="flex space-x-8 text-2xl">
           {[
             { href: "https://x.com/maetsuyo",      label: "X",      Icon: SiX      },
@@ -47,7 +47,7 @@ export default function HomePageComponent() {
             </a>
           ))}
         </div>
-        <div className="h-px w-14 bg-gradient-to-l from-transparent to-pink-500/50" />
+        <div className="h-px w-14 bg-linear-to-l from-transparent to-pink-500/50" />
       </div>
     </div>
   );
