@@ -26,11 +26,5 @@
     "playwright": "^1.61.1",
     "tailwindcss": "^4",
     "typescript": "^5"
-  },
-  "pnpm": {
-    "overrides": {
-      "@types/react": "19.2.17",
-      "@types/react-dom": "19.2.3"
-    }
   }
 }
