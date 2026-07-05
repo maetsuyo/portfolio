@@ -4,13 +4,13 @@ import { SiX, SiGithub, SiZenn } from "react-icons/si";
 export default function HomePageComponent() {
   return (
     <div className="flex flex-col justify-center items-center h-full select-none">
-      <div className="-mt-10 float-cosmic">
+      <div className="-mt-4">
         <Image
           src="/profile/profile_OCA.jpg"
           alt="profile"
-          width={320}
-          height={320}
-          className="rounded-full border border-white/10"
+          width={288}
+          height={288}
+          className="w-72 h-72 rounded-full border border-white/10 object-cover"
           priority
         />
       </div>
