@@ -95,6 +95,28 @@ const internships = [
   },
 ];
 
+const works = [
+  {
+    name: "SQLインジェクションを体験できるサイト",
+    content:
+      "Webアプリケーションの脆弱性である、SQLインジェクションを体験できるサイトを制作しました。脆弱なサイトと対策されたサイトを作りそれぞれの動作の違いをわかるようにしました。",
+  },
+  {
+    name: "ブラウザベースで使えるメモアプリ",
+    content: "簡単なメモアプリを制作しました。メモには重要度と期限を設定できるようにしました。",
+  },
+  {
+    name: "タイピングゲーム制作",
+    content:
+      "ログインしてプレイできるタイピングゲームを制作しました。結果画面で正確率やタイプミスした文字を見れるようにしました。",
+  },
+  {
+    name: "自身でCTFを解くAIエージェント",
+    content:
+      "CTFの問題の情報を入力し、ボタン1つ押すだけで問題を解きFLAGを取得してくれるAIエージェントを制作しています。",
+  },
+];
+
 export default function ProfilePageComponent() {
   return (
     <div className="p-8 max-w-4xl mx-auto text-white">
@@ -192,6 +214,23 @@ export default function ProfilePageComponent() {
                     ? `${item.course}（${item.days}日間）`
                     : `（${item.days}日間）`}
                 </p>
+                <p className="mt-2 leading-relaxed text-slate-300">{item.content}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mb-10">
+        <h3 className="text-2xl font-semibold mb-6 text-cyan-400 drop-shadow-[0_0_8px_rgba(0,212,255,0.45)]">
+          制作物
+        </h3>
+        <div className="space-y-3">
+          {works.map((item) => (
+            <div key={item.name} className="flex items-start gap-4 bg-slate-900/90 backdrop-blur-sm border border-white/10 rounded-xl p-4">
+              <div className="mt-2 w-2 h-2 rounded-full bg-emerald-400 shrink-0 shadow-[0_0_6px_rgba(52,211,153,0.8)]" />
+              <div>
+                <p className="text-xl font-medium">{item.name}</p>
                 <p className="mt-2 leading-relaxed text-slate-300">{item.content}</p>
               </div>
             </div>
