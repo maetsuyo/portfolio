@@ -22,13 +22,13 @@ export default function HomePageComponent() {
       </div>
 
       <div className="mt-4 fade-in-up" style={{ animationDelay: "0.3s" }}>
-        <p className="text-5xl font-light tracking-[0.35em] stellar-text mb-8">
+        <p className="text-5xl font-light tracking-[0.35em] cyber-text mb-8">
           佐々木 湧生
         </p>
       </div>
 
       <div className="flex items-center gap-6 fade-in-up" style={{ animationDelay: "0.45s" }}>
-        <div className="h-px w-14 bg-linear-to-r from-transparent to-purple-500/50" />
+        <div className="h-px w-14 bg-linear-to-r from-transparent to-cyan-500/50" />
         <div className="flex space-x-8 text-2xl">
           {[
             { href: "https://x.com/maetsuyo",      label: "X",      Icon: SiX      },
@@ -41,13 +41,13 @@ export default function HomePageComponent() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="text-slate-300 hover:text-purple-300 hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(168,85,247,0.9)]"
+              className="text-slate-300 hover:text-cyan-300 hover:scale-125 transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.9)]"
             >
               <Icon />
             </a>
           ))}
         </div>
-        <div className="h-px w-14 bg-linear-to-l from-transparent to-pink-500/50" />
+        <div className="h-px w-14 bg-linear-to-l from-transparent to-emerald-500/50" />
       </div>
     </div>
   );

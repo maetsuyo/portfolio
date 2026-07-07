@@ -98,9 +98,9 @@ const internships = [
 export default function ProfilePageComponent() {
   return (
     <div className="p-8 max-w-4xl mx-auto text-white">
-      <h2 className="text-3xl font-bold mb-8 stellar-text">プロフィール</h2>
+      <h2 className="text-3xl font-bold mb-8 cyber-text">プロフィール</h2>
 
-      <section className="mb-10 bg-white/4 border border-white/8 rounded-2xl p-6">
+      <section className="mb-10 bg-slate-900/90 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
         <h3 className="text-2xl font-semibold mb-3 text-cyan-400 drop-shadow-[0_0_8px_rgba(0,212,255,0.45)]">自己紹介</h3>
         <p className="leading-relaxed text-slate-200 text-xl">
           現在はWebアプリケーションの脆弱性診断のアルバイトをしています。
@@ -118,7 +118,7 @@ export default function ProfilePageComponent() {
             {languages.map((lang) => (
               <div
                 key={lang.name}
-                className="flex flex-col items-center gap-2 bg-white/4 border border-white/7 hover:bg-white/8 hover:border-purple-500/30 transition-all duration-200 rounded-xl p-5 w-28"
+                className="flex flex-col items-center gap-2 bg-slate-900/90 backdrop-blur-sm border border-white/10 hover:bg-slate-800/90 hover:border-emerald-500/30 transition-all duration-200 rounded-xl p-5 w-28"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={lang.icon} alt={lang.name} className="w-10 h-10" />
@@ -139,7 +139,7 @@ export default function ProfilePageComponent() {
             {tools.map((tool) => (
               <div
                 key={tool.name}
-                className="flex items-center gap-2 bg-white/4 border border-white/7 hover:bg-white/8 hover:border-purple-500/30 transition-all duration-200 rounded-lg px-4 py-2"
+                className="flex items-center gap-2 bg-slate-900/90 backdrop-blur-sm border border-white/10 hover:bg-slate-800/90 hover:border-emerald-500/30 transition-all duration-200 rounded-lg px-4 py-2"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -161,7 +161,7 @@ export default function ProfilePageComponent() {
           <div className="flex flex-wrap gap-x-4 gap-y-3">
             {certifications.map((cert) => (
               <span key={cert.name} className="group relative">
-                <span className="inline-block bg-purple-950/40 border border-purple-700/30 text-purple-200 text-base rounded-full px-3 py-1 cursor-default transition-colors duration-200 group-hover:border-cyan-400/50 group-hover:bg-purple-950/60 group-hover:text-cyan-100">
+                <span className="inline-block bg-emerald-950/40 border border-emerald-700/30 text-emerald-200 text-base rounded-full px-3 py-1 cursor-default transition-colors duration-200 group-hover:border-cyan-400/50 group-hover:bg-emerald-950/60 group-hover:text-cyan-100">
                   {cert.name}
                 </span>
                 <span
@@ -183,8 +183,8 @@ export default function ProfilePageComponent() {
         </h3>
         <div className="space-y-3">
           {internships.map((item, i) => (
-            <div key={i} className="flex items-start gap-4 bg-white/4 border border-white/7 rounded-xl p-4">
-              <div className="mt-2 w-2 h-2 rounded-full bg-purple-400 shrink-0 shadow-[0_0_6px_rgba(168,85,247,0.8)]" />
+            <div key={i} className="flex items-start gap-4 bg-slate-900/90 backdrop-blur-sm border border-white/10 rounded-xl p-4">
+              <div className="mt-2 w-2 h-2 rounded-full bg-emerald-400 shrink-0 shadow-[0_0_6px_rgba(52,211,153,0.8)]" />
               <div>
                 <p className="text-xl font-medium">{item.company}</p>
                 <p className="text-xl text-slate-400">

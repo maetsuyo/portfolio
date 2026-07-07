@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --bg-deep: #02020f;
-  --accent-purple: #9333ea;
-  --accent-pink: #ec4899;
-  --accent-blue: #60a5fa;
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
+  --bg-deep: #02060a;
+  --accent-cyan: #22d3ee;
+  --accent-green: #34d399;
+  --accent-blue: #38bdf8;
+  --text-primary: #eafffb;
+  --text-secondary: #7fa3a0;
 }
 
 @theme inline {
@@ -16,9 +16,9 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@keyframes nebulaPulse {
+@keyframes gridPulse {
   0%, 100% { opacity: 0.55; }
-  50% { opacity: 0.85; }
+  50% { opacity: 0.9; }
 }
 
 @keyframes ringRotate {
@@ -31,22 +31,22 @@
   to { transform: rotate(-360deg); }
 }
 
-@keyframes stellarGlow {
+@keyframes cyberGlow {
   0%, 100% {
     text-shadow:
-      0 0 10px rgba(255, 255, 255, 0.7),
-      0 0 25px rgba(168, 85, 247, 0.4),
-      0 0 50px rgba(96, 165, 250, 0.2);
+      0 0 10px rgba(226, 255, 250, 0.7),
+      0 0 25px rgba(34, 211, 238, 0.45),
+      0 0 50px rgba(52, 211, 153, 0.25);
   }
   50% {
     text-shadow:
-      0 0 15px rgba(255, 255, 255, 1),
-      0 0 35px rgba(236, 72, 153, 0.5),
-      0 0 70px rgba(168, 85, 247, 0.35);
+      0 0 15px rgba(226, 255, 250, 1),
+      0 0 35px rgba(52, 211, 153, 0.55),
+      0 0 70px rgba(34, 211, 238, 0.4);
   }
 }
 
-@keyframes floatCosmic {
+@keyframes floatCyber {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
 }
@@ -61,7 +61,7 @@
   to { transform: translateY(0); }
 }
 
-@keyframes borderNebula {
+@keyframes borderGrid {
   0%, 100% { opacity: 0.45; }
   50% { opacity: 0.85; }
 }
@@ -72,49 +72,61 @@ body {
   font-family: var(--font-geist-sans), Arial, sans-serif;
 }
 
-.cosmic-bg {
+.cyber-grid-bg {
   position: relative;
   background:
-    radial-gradient(ellipse at 20% 10%, rgba(147, 51, 234, 0.13) 0%, transparent 45%),
-    radial-gradient(ellipse at 80% 15%, rgba(96, 165, 250, 0.10) 0%, transparent 45%),
-    radial-gradient(ellipse at 50% 92%, rgba(236, 72, 153, 0.09) 0%, transparent 45%),
-    radial-gradient(ellipse at 8% 75%, rgba(147, 51, 234, 0.07) 0%, transparent 40%),
-    radial-gradient(ellipse at 92% 70%, rgba(59, 130, 246, 0.06) 0%, transparent 40%),
-    #02020f;
+    radial-gradient(ellipse at 15% 10%, rgba(34, 211, 238, 0.1) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 20%, rgba(52, 211, 153, 0.08) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 95%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(45, 212, 191, 0.16) 0px,
+      rgba(45, 212, 191, 0.16) 1px,
+      transparent 1px,
+      transparent 48px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(45, 212, 191, 0.16) 0px,
+      rgba(45, 212, 191, 0.16) 1px,
+      transparent 1px,
+      transparent 48px
+    ),
+    #02060a;
 }
 
-.stellar-text {
-  color: #f8fafc;
-  animation: stellarGlow 4s ease-in-out infinite;
+.cyber-text {
+  color: #eafffb;
+  animation: cyberGlow 4s ease-in-out infinite;
 }
 
-.nebula-ring-wrapper {
+.cyber-ring-wrapper {
   position: relative;
   display: inline-block;
 }
 
-.nebula-ring-outer {
+.cyber-ring-outer {
   position: absolute;
   inset: -6px;
   border-radius: 9999px;
-  background: conic-gradient(from 0deg, #9333ea, #ec4899, #60a5fa, #a855f7, #9333ea);
+  background: conic-gradient(from 0deg, #22d3ee, #34d399, #38bdf8, #22d3ee);
   animation: ringRotate 7s linear infinite;
   opacity: 0.35;
   filter: blur(6px);
   z-index: 0;
 }
 
-.nebula-ring-inner {
+.cyber-ring-inner {
   position: absolute;
   inset: -2px;
   border-radius: 9999px;
-  background: conic-gradient(from 180deg, #9333ea, #60a5fa, #ec4899, #9333ea);
+  background: conic-gradient(from 180deg, #22d3ee, #38bdf8, #34d399, #22d3ee);
   animation: ringRotateReverse 5s linear infinite;
   z-index: 0;
 }
 
-.float-cosmic {
-  animation: floatCosmic 5s ease-in-out infinite;
+.float-cyber {
+  animation: floatCyber 5s ease-in-out infinite;
 }
 
 .fade-in-up {
@@ -125,7 +137,7 @@ body {
   animation: fadeInDown 0.6s ease-out;
 }
 
-.nebula-border-bottom {
+.cyber-border-bottom {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -134,15 +146,15 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(147, 51, 234, 0.7),
-    rgba(236, 72, 153, 0.6),
-    rgba(96, 165, 250, 0.7),
+    rgba(34, 211, 238, 0.7),
+    rgba(52, 211, 153, 0.6),
+    rgba(56, 189, 248, 0.7),
     transparent
   );
-  animation: borderNebula 3.5s ease-in-out infinite;
+  animation: borderGrid 3.5s ease-in-out infinite;
 }
 
-.nebula-border-top {
+.cyber-border-top {
   position: absolute;
   top: 0;
   left: 0;
@@ -151,10 +163,10 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(96, 165, 250, 0.7),
-    rgba(147, 51, 234, 0.6),
-    rgba(236, 72, 153, 0.7),
+    rgba(56, 189, 248, 0.7),
+    rgba(34, 211, 238, 0.6),
+    rgba(52, 211, 153, 0.7),
     transparent
   );
-  animation: borderNebula 3.5s ease-in-out infinite;
+  animation: borderGrid 3.5s ease-in-out infinite;
 }
