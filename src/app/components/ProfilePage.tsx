@@ -38,16 +38,16 @@ const internships = [
 export default function ProfilePageComponent() {
   return (
     <div className="p-8 max-w-4xl mx-auto text-white">
-      <h2 className="text-3xl font-bold mb-8">プロフィール</h2>
+      <h2 className="text-3xl font-bold mb-8 animate-fade-in-up">プロフィール</h2>
 
-      <section className="mb-10 bg-white/5 rounded-2xl p-6">
+      <section className="mb-10 bg-white/5 rounded-2xl p-6 animate-fade-in-up [animation-delay:100ms]">
         <h3 className="text-2xl font-semibold mb-3 text-cyan-400">自己紹介</h3>
         <p className="leading-relaxed text-gray-200 text-xl">
           現在はWebアプリケーションの脆弱性診断のアルバイトをしています。
         </p>
       </section>
 
-      <section className="mb-10">
+      <section className="mb-10 animate-fade-in-up [animation-delay:200ms]">
         <h3 className="text-2xl font-semibold mb-6 text-cyan-400">スキル</h3>
 
         <div className="mb-8">
@@ -58,7 +58,7 @@ export default function ProfilePageComponent() {
             {languages.map((lang) => (
               <div
                 key={lang.name}
-                className="flex flex-col items-center gap-2 bg-white/5 hover:bg-white/10 transition-colors rounded-xl p-5 w-28"
+                className="flex flex-col items-center gap-2 bg-white/5 hover:bg-white/10 hover:-translate-y-1 transition-all duration-200 rounded-xl p-5 w-28"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={lang.icon} alt={lang.name} className="w-10 h-10" />
@@ -79,7 +79,7 @@ export default function ProfilePageComponent() {
             {tools.map((tool) => (
               <div
                 key={tool.name}
-                className="flex items-center gap-2 bg-white/5 hover:bg-white/10 transition-colors rounded-lg px-4 py-2"
+                className="flex items-center gap-2 bg-white/5 hover:bg-white/10 hover:-translate-y-1 transition-all duration-200 rounded-lg px-4 py-2"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -102,7 +102,7 @@ export default function ProfilePageComponent() {
             {certifications.map((cert) => (
               <span
                 key={cert}
-                className="bg-cyan-950/60 border border-cyan-700/40 text-cyan-300 text-base rounded-full px-3 py-1"
+                className="bg-cyan-950/60 border border-cyan-700/40 text-cyan-300 text-base rounded-full px-3 py-1 hover:bg-cyan-900/60 transition-colors duration-200"
               >
                 {cert}
               </span>
@@ -111,13 +111,16 @@ export default function ProfilePageComponent() {
         </div>
       </section>
 
-      <section className="mb-10">
+      <section className="mb-10 animate-fade-in-up [animation-delay:300ms]">
         <h3 className="text-2xl font-semibold mb-6 text-cyan-400">
           サマーインターンシップ参加実績
         </h3>
         <div className="space-y-3">
           {internships.map((item, i) => (
-            <div key={i} className="flex items-start gap-4 bg-white/5 rounded-xl p-4">
+            <div
+              key={i}
+              className="flex items-start gap-4 bg-white/5 hover:bg-white/10 transition-colors duration-200 rounded-xl p-4"
+            >
               <div className="mt-2 w-2 h-2 rounded-full bg-cyan-400 shrink-0" />
               <div>
                 <p className="text-xl font-medium">{item.company}</p>
@@ -132,7 +135,7 @@ export default function ProfilePageComponent() {
         </div>
       </section>
 
-      <section className="bg-white/5 rounded-2xl p-6">
+      <section className="bg-white/5 rounded-2xl p-6 animate-fade-in-up [animation-delay:400ms]">
         <h3 className="text-2xl font-semibold mb-3 text-cyan-400">その他</h3>
         <p className="text-base text-gray-400">
           サイバーセキュリティを学ぶうえで大切にしていること — 記載予定

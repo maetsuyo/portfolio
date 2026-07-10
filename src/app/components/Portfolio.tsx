@@ -10,7 +10,7 @@ export default function PortfolioComponent() {
   
   return (
     <div className="flex flex-col h-full bg-gray-900">
-      <main className="flex-1 overflow-auto">
+      <main key={currentPage} className="flex-1 overflow-auto animate-fade-in">
         {currentPage === "home" && <HomePageComponent />}
         {currentPage === "profile" && <ProfilePageComponent />}
       </main>
