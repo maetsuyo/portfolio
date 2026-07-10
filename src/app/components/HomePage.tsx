@@ -4,7 +4,7 @@ import { SiX, SiGithub, SiZenn } from "react-icons/si";
 export default function HomePageComponent() {
   return (
     <div className="flex flex-col justify-center items-center h-full text-white">
-      <div className="-mt-16">
+      <div className="-mt-16 animate-fade-in-up">
         <Image
           src="/profile/profile-2.jpg"
           alt="profile"
@@ -14,23 +14,23 @@ export default function HomePageComponent() {
           priority
         />
       </div>
-      <div>
+      <div className="animate-fade-in-up [animation-delay:150ms]">
         <p className="text-2xl font-light tracking-wider leading-relaxed font-sans mt-5">
           OCA大阪デザイン&テクノロジー専門学校
         </p>
       </div>
-      <div>
+      <div className="animate-fade-in-up [animation-delay:300ms]">
         <p className="text-4xl font-light leading-snug font-sans mb-3">
           前田 剛志
         </p>
       </div>
-      <div className="flex space-x-5 text-2xl">
+      <div className="flex space-x-5 text-2xl animate-fade-in-up [animation-delay:450ms]">
         <a
           href="https://x.com/maetsuyo"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="X"
-          className="hover:scale-125 transition-transform duration-200"
+          className="hover:scale-125 active:scale-95 transition-transform duration-200"
         >
           <SiX />
         </a>
@@ -39,7 +39,7 @@ export default function HomePageComponent() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Zenn"
-          className="hover:scale-125 transition-transform duration-200"
+          className="hover:scale-125 active:scale-95 transition-transform duration-200"
         >
           <SiZenn color="#00bfff"/>
         </a>
@@ -48,7 +48,7 @@ export default function HomePageComponent() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
-          className="hover:scale-125 transition-transform duration-200"
+          className="hover:scale-125 active:scale-95 transition-transform duration-200"
         >
           <SiGithub />
         </a>
